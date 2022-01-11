@@ -1,0 +1,6 @@
+geckodriver.exe
+geckodriver.log
+mine/
+output/
+.idea/
+venv/
