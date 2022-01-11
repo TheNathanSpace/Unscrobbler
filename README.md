@@ -44,7 +44,7 @@ Trial runs will still output results to `./output/`, so they're useful to see wh
 
 1. Download/install [Python 3](https://www.python.org/downloads/).
 
-2. Download Unscrobbler.
+2. Download [Unscrobbler](https://github.com/TheKingElessar/Unscrobbler/releases/latest).
 
 3. Unzip the folder. Inside the main folder (where `Unscrobbler.py` is located), open a command-line terminal. Run the following command to install dependencies: `pip3 install -r requirements.txt`.
 
