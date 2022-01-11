@@ -48,7 +48,21 @@ Trial runs will still output results to `./output/`, so they're useful to see wh
 
 3. Unzip the folder. Inside the main folder (where `Unscrobbler.py` is located), open a command-line terminal. Run the following command to install dependencies: `pip3 install -r requirements.txt`.
 
-4. Now, you can run Unscrobbler with the command `python Unscrobbler.py` or similar.
+4. Edit lines 17-18 of `Unscrobbler.py` in a text editor for your purposes. Example:
+
+    ```
+    delete_artists = ["Artist One", "Artist Two", "Also an Artist"]
+    delete_songs = []
+    ```
+    
+    ```
+    delete_artists = []
+    delete_songs = ["Bangarang"]
+    ```
+
+    Note that capitalization is important—if what you put in isn't perfect, it won't match what shows up on Last.fm.
+
+5. Now, you can run Unscrobbler with the command `python Unscrobbler.py` or similar.
 
 ### Geckodriver
 

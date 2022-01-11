@@ -13,8 +13,10 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 
-delete_artists = ["jxdn", "MOD SUN"]
-delete_songs = ["All We Have"]
+### MAKE CHANGES HERE!!!
+delete_artists = ["Artist One", "Artist Two", "Also an Artist"]
+delete_songs = []
+### END CHANGES
 
 trial_run = input("Is this a trial run (don't actually delete)? (Y/N) ")
 if trial_run == "y" or trial_run == "Y":
