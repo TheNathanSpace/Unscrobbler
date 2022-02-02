@@ -136,8 +136,19 @@ with webdriver.Firefox() as driver:
 
     from selenium.webdriver.support import expected_conditions
     from selenium.webdriver.support.wait import WebDriverWait
+
     WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, "button[name='submit']")))
-    driver.find_element(by = By.CSS_SELECTOR, value = "button[name='submit']").click()
+    while True:
+        try:
+            driver.find_element(by = By.CSS_SELECTOR, value = "button[name='submit']").click()
+            break
+        except:
+            print("\nERROR! Can't access the webpage. You need to accept the cookies popup!")
+            print("(Ctrl+C to stop the program and exit this retry loop)")
+            for count in range(10):
+                print("Will try again in: " + str(10 - count))
+                time.sleep(1)
+
     driver.get(page_url)
 
     while True:
