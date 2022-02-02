@@ -133,6 +133,10 @@ with webdriver.Firefox() as driver:
     driver.get(login_page)
     driver.find_element(by = By.ID, value = "id_username_or_email").send_keys(username)
     driver.find_element(by = By.ID, value = "id_password").send_keys(password)
+
+    from selenium.webdriver.support import expected_conditions
+    from selenium.webdriver.support.wait import WebDriverWait
+    WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, "button[name='submit']")))
     driver.find_element(by = By.CSS_SELECTOR, value = "button[name='submit']").click()
     driver.get(page_url)
 
